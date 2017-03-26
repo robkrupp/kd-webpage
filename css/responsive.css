@@ -1,0 +1,260 @@
+/******************************
+SMARTPHONE LANDSCAPE
+*******************************/
+@media screen and (min-width: 600px) {
+	
+  /******************************
+  PAGE: HEADER
+  *******************************/
+	
+	
+  /******************************
+  PAGE: FOOTER
+  *******************************/
+  footer {
+
+  }
+
+  /******************************
+  PAGE: HOME
+  *******************************/
+  #home .banner {
+    height: 50vh;
+  }
+
+  .banner section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
+
+
+  /******************************
+  TWO COLUMN LAYOUT
+  *******************************/
+  #primary {		/* change to match convention below */
+    width: 55%;
+    float: right;
+    margin-right: 2.5%;
+  }
+  
+  #secondary {
+    width: 35%;
+    float: left;
+    margin-left: 2.5%;
+  }
+  
+  
+  /******************************
+  PAGE: PORTFOLIO
+  *******************************/
+  .gallery-item {
+	 width: 45%;
+  }
+
+  .gallery li:nth-child(-2n+3) {
+    margin-right: 3%;
+  }
+  
+  /*.gallery li:nth-child(4n) {
+    clear: left;
+  }*/
+	
+}
+
+
+
+
+/******************************
+lARGE TABLES & NORMAL DESKTOPS
+*******************************/
+@media screen and (min-width: 780px) {
+  
+  /******************************
+	GENERAL ELEMENTS
+  *******************************/
+  h1 {
+  	font-size: 2.2em;
+  }
+
+  h2 {
+	font-size: 1.8em;
+  }
+
+  h3 {
+	font-size: 1.4em;
+  }
+
+  h1, h2, h3 {
+	font-weight: bold;
+  }
+
+
+  /******************************
+  	PAGE: HEADER
+  *******************************/
+  body {
+		
+  }
+	
+  header {
+	display: flex;
+	border-bottom: 5px solid #3A506B;
+	padding: 0.5em;
+  }
+	
+  .logo {
+	text-align: center;
+	width: auto;
+  }
+	
+  .nav-links {
+	height: 100%;
+	width: 50%;
+	background-color: inherit;
+	max-width: 450px;
+	align-self: flex-end;
+	padding: 0;
+	margin-left: auto;
+
+	box-shadow: none;
+  }
+	
+  .nav-links li {
+
+  }
+
+  .nav-links a,
+  .nav-links a:visited,
+  .nav-links a:hover {
+
+  }
+
+  .nav-links a,
+  .nav-links a:visited {
+	color: #fff;
+  }
+
+  .nav-links a.selected,
+  .nav-links a:hover {
+	color: #B5B5B5;
+  }
+	
+
+  /******************************
+  	PAGE: FOOTER
+  *******************************/
+  footer {
+	margin-top: 3em;
+	padding: 8px;
+	font-size: 1.2em;
+  }
+
+  .social-icon {
+	width: 40px;
+	height: 40px;
+	margin: 8px 8px;
+  }
+	
+	
+  /******************************
+  	MAIN CONTENT
+  *******************************/
+  .wrapper {
+		min-height: calc(100vh - 130px - 150px); /* size of header - size of footer */
+  }
+
+
+  /******************************
+  	PAGE: HOME
+  *******************************/	
+
+  /*	Main Banner */
+  .banner {
+    padding: 0 5%;
+  }
+
+  #home .banner {
+    height: 70vh;
+  }
+
+  .banner .media-container,
+  .banner .content-container {
+    position: static;
+    top: initial;
+    left: initial;
+    transform: initial;
+
+    opacity: 1.0;
+
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+  }
+
+  #home .banner:nth-of-type(2) {
+    height: auto;
+  }
+
+  .banner .media-container {
+    max-width: 29%;
+    max-height: 100%;
+
+    padding: 24px;
+  }
+
+  .banner .content-container {
+    width: 69%;
+    height: 100%;
+
+    padding: 24px 36px;
+  }
+
+
+  /* Main Boxes */
+  .box div {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+
+    display: inline-block;
+    margin: auto 0;
+    vertical-align: middle;
+  }
+
+  .box-content {
+    width: 69%;
+  }
+
+  .box-media {
+    width: 30%;
+    opacity: 1.0;
+  }
+
+
+  /******************************
+  	PAGE: CONTACT
+  *******************************/
+  form {
+  	max-width: 50vw;
+  }
+
+  /******************************
+  	PORTFOLIO
+  *******************************/
+  .gallery-item {
+		width: 31%;
+  }
+
+  .gallery li,
+  .gallery li:first-of-type {
+    margin-right: 2%;
+  }
+
+  .gallery li:nth-child(3n+3) {
+    margin-right: 0%;
+  }
+	
+}

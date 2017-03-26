@@ -1,0 +1,553 @@
+/******************************
+GENERAL
+*******************************/
+* {
+	box-sizing: border-box;
+}
+
+html {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+}
+
+body {
+
+	/*font-family: 'Roboto', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;*/
+
+  	font-family: 'Roboto', sans-serif;
+	margin: 150px 0 0 0;	/* 130px for height of header + spacing */
+  	height: 100%;
+	width: 100%;
+	
+}
+
+.wrapper {
+	min-height: calc(100vh - 130px - 110px); /* size of header - size of footer */
+}
+
+h1 {
+	margin: 0.5em 0;
+}
+
+h2 {
+	margin: 0.4em 0;
+}
+
+h3 {
+	margin: 0.3em 0;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.left-align {
+	text-align: left;
+	margin: 0;
+}
+
+.narrow-hr {
+    margin: 0.25em 0 0.5em 0;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.disabled-btn {
+	pointer-events: none;
+   cursor: default;
+}
+
+
+
+/******************************
+HEADER
+*******************************/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+	
+  box-shadow: 0 3px 3px #777;
+
+  z-index: 50;
+}
+
+header h1,
+header h2 {
+  margin: 0;
+}
+
+header h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 3em;
+  font-weight: 300;
+	
+}
+
+header h2 {
+  font-family: inherit;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+
+.logo {
+  display: block;
+  margin: 0.5em auto 0.5em 1em;
+  text-align: center;
+}
+
+
+/*		NAVIGATION BAR 		*/
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	margin: 5px 0 0.5em 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 1.2em;
+	list-style: none;
+}
+
+
+/******************************
+WRAPPER (Main Content)
+*******************************/
+.wrapper {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	overflow: auto;
+}
+
+.wrapper h3 {
+	margin: 1.0em 0 0 0;
+}
+
+.wrapper-no-height {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+
+/******************************
+FOOTER
+*******************************/
+
+footer {
+
+	margin-top: 36px;
+	padding: 8px;
+	
+	width: 100%;
+	
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 5px solid #599a68;
+	border-bottom: none;
+	color: #ccc;
+
+	box-shadow: 0 -3px 3px #777
+	
+}
+
+.social-icon {
+  	width: 30px;
+  	height: 30px;
+  	margin: 5px 5px;
+	opacity: 1.0;
+}
+
+
+
+/******************************
+PAGE: Home Page
+*******************************/
+
+.banner,
+.box {
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+
+	height: auto;
+
+	background-color: #fafafa;
+	border: 5px solid #1B1B1B;
+	box-shadow: 0 3px 4px #777, 0 -3px 4px #777;
+
+	/*z-index: -1;*/
+}
+.box-list {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+/* Banner Element Typical Size */
+.banner {
+	width: 100%;
+
+	border-left: none;
+	border-right: none;
+
+	margin-bottom: 2em;
+}
+
+/* Box Element Typical Sizes */
+.box-list .box {
+	min-height: 200px;
+	height: auto;
+	margin: 2em auto;
+}
+
+/* Title Spacing */
+.banner h2,
+.box-list h3 {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+.banner a {
+	margin-top: 18px;
+}
+
+/* Background Positioning */
+.full-background,
+.media-container,
+.box-media {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.full-background {
+	width: 100%;
+	opacity: 0.4;
+}
+.media-container,
+.box-media {
+    max-width: 80%;
+    max-height: 80%;
+ 	opacity: 0.2;
+}
+
+/* Formatting & Layout */ 
+.banner section,
+.box-list .box {
+	position: relative;
+	display: block;
+	overflow: visible;
+
+	margin: auto;
+    height: auto;
+
+    text-align: center;
+	font-size: 18px;
+	/*font-weight: 550;  normal = 500, bold = 700 */
+}
+.banner section {
+	width: 90%;
+	padding: 1em 0;
+}
+.box-list .box {
+	width: 100%;
+	padding: 1em;
+	overflow: hidden;
+}
+
+/* Changes Size of Headder Box */
+.box-list .box:first-of-type {
+	min-height: auto;
+	padding: 0;
+}
+
+/* Stops Margin On Bottom Of Box List */
+.box-list .box:not(:last-child) {
+	margin-bottom: 1.5em;
+}
+
+
+
+/* 	Our Services Section - Text Format  */
+.about-item {
+	text-align: center;
+	list-style-type: none;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.about-sublist {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+
+	text-align: center;
+	text-decoration: none;
+	text-decoration: inherit;
+	font-weight: normal;
+	list-style: none;
+
+	padding: 0;
+}
+
+.about-sublist li {
+	margin-top: 0.25em;
+}
+
+
+/******************************
+PAGE: Projects (gallery.html)
+*******************************/
+
+/* Margin Under Intro Paragraph */
+#gallery section:first-of-type {
+	margin-bottom: 2em;
+}
+
+#gallery .banner h2 {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+.gallery {
+	padding: 0;
+}
+
+.gallery-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 90%;
+	
+	background: rgba(255, 255, 255, 0.3);
+
+	margin: 18px auto 18px auto;
+	padding: 8px;
+
+	color: #1B1B1B; 
+	border-radius: 3px;
+	border: 1.5px solid #1C2541;
+	box-shadow: -2px  2px 4px #777,
+				 1px -1px 2px #777;
+
+	text-align: center;
+}
+
+.gallery-item img {
+	padding: 8px;
+	height: 200px;
+	width: auto;
+}
+
+.gallery-item h4 {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.gallery-item a {
+	display: inline-block;
+	color: darkgrey;
+	font-size: 0.8em;
+	margin: 0.75em auto;
+}
+
+.gallery-item p {
+	color: #1B1B1B;
+}
+
+.gallery-item hr {
+	color: #bdc3c7;
+	margin: 8px;
+}
+
+.gallery-item:hover {
+	box-shadow: none;
+	box-shadow: -2px  2px 2px #777 inset,
+			     2px -2px 2px #777 inset;
+	background-color: #e6e6e6;
+}
+
+
+/******************************
+PAGE: CONTACT
+*******************************/
+.contact-info {
+	list-style: none;
+}
+
+.contact-info a {
+	
+  min-height: 30px;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  padding: 0 0 0 30px;
+}
+
+.contact-info li.phone a {
+	background-image: url('../img/media/phone.png');
+}
+
+.contact-info li.mail a {
+	background-image: url('../img/media/mail.png');
+}
+
+
+
+/*	   Contact Form 	*/
+form {
+	background-color: #FAFAFA;
+	border: 5px solid #1B1B1B;
+	border-radius: 4px;
+	box-shadow: -3px 0 3px #777, 3px 0 3px #777;
+
+	padding: 20px 24px;
+	margin: 0 auto;
+
+	max-width: 100%;
+}
+
+form > hr {
+	width: 80%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+label {
+	display: block;
+	text-align: left;
+	margin-bottom: 0.25em;
+	padding-left: 0.2em;
+}
+
+input,
+textarea {
+	width: 100%;
+	
+	padding: 15px;
+	margin-bottom: 1em;
+	outline: 0;
+	border: none;
+	border-bottom: 3px solid rgba(0,0,0, 0.05);
+	border-radius: 5px;
+	
+	color: black;
+	background-color: #e8eeef;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+
+.btn[type="submit"] {
+	background-color: #52bab3;
+	margin-top: 1.2em;
+}
+
+.btn[type="reset"] {
+	background-color: #ff784f;
+}
+
+.btn {
+	width: auto;
+	border: 1.5px solid #1B1B1B;
+	background: rgba(255, 255, 255, 0.25);
+	text-align: center;
+	padding: 0.4em 0.8em;
+	margin: 0 5%;
+	border-radius: 2px;
+	box-shadow: -2px 2px 1px #777;
+	display: inline-block;
+}
+
+.btn:hover {
+	opacity: 0.75;
+}
+
+.btn:active {
+	box-shadow: none;
+}
+
+
+/******************************
+COLORS
+*******************************/
+
+/*
+Main Colors
+white: 		#FAFAFA (text)
+light grey: #DCDCDD (background)
+darker grey: #B5B5B5 (selected and hovered links)
+light blue: #3A506B (header/footer borders)
+dark blue: 	#1C2541 (header/footer)
+black-ish:	#1B1B1B (text)
+*/
+
+
+/* site body */
+body {
+	background-color: #DCDCDD;
+	color: #1B1B1B;
+}
+
+/* green header */
+header {
+  background: #1C2541;
+  border-color: #3A506B;	
+}
+
+/* green footer */
+footer {
+  background: #1C2541;
+  border-color:#3A506B;
+  color: #FAFAFA;	
+}
+
+hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #1B1B1B;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+/* nav background on mobile devices */
+.nav-links {
+  background: #3A506B;
+  box-shadow: 0 2px 3px #1B1B1B, 0 -2px 3px #1B1B1B;
+}
+
+/* logo text */
+.logo h1, 
+.logo h2 {
+  color: #FAFAFA;	
+}
+
+/* links */
+a {
+  color: #1B1B1B;
+}
+
+/* nav link */
+.nav-links a, 
+.nav-links a:visited {
+  color: #FAFAFA;
+}
+
+/* selected nav link */
+.nav-links a.selected,
+.nav-links a:hover {
+  color: #B5B5B5;
+}
+
